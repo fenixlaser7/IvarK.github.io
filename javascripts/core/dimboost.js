@@ -1,10 +1,10 @@
 function getDimensionBoostPower() {
   if (player.currentChallenge == "challenge11" || player.currentChallenge == "postc1") return Decimal.fromNumber(1);
 
-  var ret = 2
-  if (player.infinityUpgrades.includes("resetMult")) ret = 2.5
-  if (player.challenges.includes("postc7")) ret = 4
-  if (player.currentChallenge == "postc7" || player.timestudy.studies.includes(81)) ret = 10
+  var ret = 2.5
+  if (player.infinityUpgrades.includes("resetMult")) ret = 4
+  if (player.challenges.includes("postc7")) ret = 8
+  if (player.currentChallenge == "postc7" || player.timestudy.studies.includes(81)) ret = 20
 
   if (player.achievements.includes("r101")) ret = ret*1.01
   if (player.timestudy.studies.includes(83)) ret = Decimal.pow(1.0004, player.totalTickGained).times(ret);
