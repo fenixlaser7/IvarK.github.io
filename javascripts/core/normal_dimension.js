@@ -128,7 +128,7 @@ function hasInfinityMult(tier) {
 
     function multiplySameCosts(cost) {
         var tiers = [ null, "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eight" ];
-        var tierCosts = [ null, new Decimal(1e3), new Decimal(1e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e10), new Decimal(1e12), new Decimal(1e15) ];
+        var tierCosts = [ null, new Decimal(1e2), new Decimal(1e3), new Decimal(2e4), new Decimal(2e5), new Decimal(4e6), new Decimal(5e8), new Decimal(5e10), new Decimal(6e12) ];
     
         for (let i = 1; i <= 8; ++i) {
             if (player[tiers[i] + "Cost"].e == cost.e) player[tiers[i] + "Cost"] = player[tiers[i] + "Cost"].times(tierCosts[i])
@@ -174,7 +174,7 @@ function hasInfinityMult(tier) {
     }
     
     function getDimensionPowerMultiplier(tier) {
-        let dimMult = 2;
+        let dimMult = 3;
     
     
         if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(10/0.30,Math.random())*0.30
